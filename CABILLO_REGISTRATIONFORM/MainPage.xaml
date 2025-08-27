@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CABILLO_REGISTRATIONFORM.MainPage"
+             BackgroundColor="LightGray">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+            <Frame
+             BackgroundColor="DimGray"
+             CornerRadius="10"
+             HasShadow="True"
+             BorderColor="DimGray"
+             Padding="25"
+             Margin="0,0,0,500"
+             VerticalOptions="Center">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Entry x:Name="FirstNameEntry"
+                           Placeholder="First Name"
+                           BackgroundColor="#F1F1F1"
+                           HeightRequest="45"
+                           FontFamily="Arial"
+                           TextColor="Black" />
+
+                    <Entry x:Name="LastNameEntry"
+                           Placeholder="Last Name"
+                           BackgroundColor="#F1F1F1"
+                           HeightRequest="45"
+                           FontFamily="Arial"
+                           TextColor="Black" />
+
+                    <Entry x:Name="AgeEntry"
+                           Placeholder="How old are you?"
+                           Keyboard="Numeric"
+                           BackgroundColor="#F1F1F1"
+                           HeightRequest="45"
+                           FontFamily="Arial"
+                           TextColor="Black" />
+
+                    <Entry x:Name="AddressEntry"
+                           Placeholder="Address"
+                           BackgroundColor="#F1F1F1"
+                           HeightRequest="45"
+                           FontFamily="Arial"
+                           TextColor="Black" />
+
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="Email"
+                           Keyboard="Email"
+                           BackgroundColor="#F1F1F1"
+                           HeightRequest="45"
+                           FontFamily="Arial"
+                           TextColor="Black" />
+
+                    <Label Text="Date of Birth:"
+                           FontSize="15"
+                           FontFamily="Arial"
+                           HorizontalOptions="Start" />
+
+                    <DatePicker x:Name="DobPicker"
+                                FontFamily="Arial"
+                                MinimumDate="2000-01-01"
+                                MaximumDate="2100-12-31"
+                                Date="2005-01-01"
+                                HorizontalOptions="Start"
+                                BackgroundColor="Grey"/>
+
+                    <Label Text="Status:"
+                           FontSize="15"
+                           TextColor="White"
+                           FontFamily="Arial" />
+
+                    <Picker x:Name="StatusPicker"
+                            Title="Choose one"
+                            BackgroundColor="Grey"
+                            FontFamily="Arial">
+                        <Picker.Items>
+                            <x:String>Single</x:String>
+                            <x:String>Taken</x:String>
+                            <x:String>Married</x:String>
+                            <x:String>Widow</x:String>
+                            <x:String>Complicated</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Gender:" FontSize="15" TextColor="White" FontFamily="Arial"/>
+
+                    <HorizontalStackLayout>
+                        <RadioButton x:Name="MaleRadio" Content="Male" />
+                        <RadioButton x:Name="FemaleRadio" Content="Female" />
+                    </HorizontalStackLayout>
+
+                    <Editor x:Name="AboutEditor"
+                            Placeholder="About you"
+                            AutoSize="TextChanges"
+                            BackgroundColor="#F1F1F1"
+                            HeightRequest="100"
+                            FontFamily="Arial"
+                            TextColor="Black"/>
+
+                    <Button Text="SUBMIT"
+                            FontSize="20"
+                            BackgroundColor="Gray"
+                            TextColor="White"
+                            FontFamily="Arial"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
