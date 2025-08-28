@@ -79,10 +79,14 @@
                             FontFamily="Arial">
                         <Picker.Items>
                             <x:String>Single</x:String>
-                            <x:String>Taken</x:String>
+                            <x:String>In a relationship</x:String>
+                            <x:String>Engaged</x:String>
                             <x:String>Married</x:String>
-                            <x:String>Widow</x:String>
+                            <x:String>Separated</x:String>
+                            <x:String>Divorced</x:String>
+                            <x:String>Widowed</x:String>
                             <x:String>Complicated</x:String>
+                            <x:String>Dating</x:String>
                         </Picker.Items>
                     </Picker>
 
@@ -101,13 +105,17 @@
                             FontFamily="Arial"
                             TextColor="Black"/>
 
-                    <Button Text="SUBMIT"
-                            FontSize="20"
+                    <Button 
+                        x:Name="SubmitButton"
+                        Text="SUBMIT"
+                            FontSize="15"
                             BackgroundColor="Gray"
                             TextColor="White"
                             FontFamily="Arial"
                             CornerRadius="10"
                             HeightRequest="50"
+                        Clicked="OnCounterClicked"
+                            
                             />
 
                 </VerticalStackLayout>
